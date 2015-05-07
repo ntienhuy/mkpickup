@@ -86,7 +86,7 @@
           </div>        
         </div>
       </div>
-
+    @yield('content')
       <!-- Navbar
       ================================================== -->
       <div class="bs-docs-section clearfix">
