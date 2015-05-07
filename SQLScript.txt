@@ -1,0 +1,17 @@
+CREATE TABLE users (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(30),
+    email VARCHAR(50) UNIQUE,
+    password VARCHAR(60),
+    remember_token VARCHAR(100) NULL,    
+    created_at  TIMESTAMP,
+    updated_at  TIMESTAMP 
+)
+
+CREATE TABLE password_resets (
+	email VARCHAR(255) ,
+	token VARCHAR(255) ,    
+    created_at  TIMESTAMP,
+    INDEX(email),
+    INDEX(token)
+)
