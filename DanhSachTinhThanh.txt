@@ -1,59 +1,4 @@
-﻿CREATE TABLE users (
-    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(30),
-    email VARCHAR(50) UNIQUE,
-    password VARCHAR(60),
-    remember_token VARCHAR(100) NULL,    
-    created_at  TIMESTAMP,
-    updated_at  TIMESTAMP 
-)
-
-CREATE TABLE password_resets (
-	email VARCHAR(255) ,
-	token VARCHAR(255) ,    
-    created_at  TIMESTAMP,
-    INDEX(email),
-    INDEX(token)
-)
-
-CREATE TABLE locations (
-    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(50)
-
-)
-
-CREATE TABLE routes(
-    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    idLocationFrm INT,
-    nameFrm VARCHAR(50),
-    idLocationTo INT,
-    nameTo VARCHAR(50),
-    duration INT,
-    price LONG,
-    carType INT,
-    updated_at TIMESTAMP,
-    isTop BOOLEAN
-)
-
-CREATE TABLE carTypes(
-    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(50),
-    description VARCHAR(500),
-    kmPrice INT,
-    nightFee INT
-)
-
-INSERT INTO `cartypes`( `name`, `description`, `seat`) 
-VALUES 
-('Xe 4-7 chỗ','Xe 4-7 chỗ ngồi',4),
-('Xe 16 chỗ','Xe 16 chỗ ngồi',16),
-('Xe 29 chỗ','Xe 50 chỗ ngồi',29)
-
-INSERT INTO `routes`( `idLocationFrm`, `nameFrm`, `idLocationTo`, `nameTo`, `duration`,`length`, `price`, `carType`, `updated_at`) VALUES 
-(45,'Hồ Chí Minh',85,'Cần Giờ - Hồ Chí Minh',24,130,1200000,1,now())
-
-INSERT INTO `locations`( `name`) VALUES 
-("Hà Nội"),
+﻿("Hà Nội"),
 ("Hải Phòng"),
 ("Bắc Giang"),
 ("Bắc Kạn"),
@@ -816,4 +761,4 @@ INSERT INTO `locations`( `name`) VALUES
 ("Văn Chấn - Yên Bái"),
 ("Văn Yên - Yên Bái"),
 ("Yên Bái - Yên Bái"),
-("Yên Bình - Yên Bái");
+("Yên Bình - Yên Bái"),
