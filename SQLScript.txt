@@ -39,11 +39,12 @@ CREATE TABLE carTypes(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50),
     description VARCHAR(500),
+    seat INT,
     kmPrice INT,
     nightFee INT
 )
 
-INSERT INTO `cartypes`( `name`, `description`, `seat`) 
+INSERT INTO `carTypes`( `name`, `description`, `seat`) 
 VALUES 
 ('Xe 4-7 chỗ','Xe 4-7 chỗ ngồi',4),
 ('Xe 16 chỗ','Xe 16 chỗ ngồi',16),
