@@ -33,7 +33,8 @@ class ManageController extends Controller {
     public function index()
     {
         $routes = App\Route::getItemsById(1);
-        return view('manage.home',compact('routes'));
+        $locations = App\Location::getLocations();
+        return view('manage.home',compact('routes','locations'));
     }
 
 }

@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="{{ asset('/css/bootstrap.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/select2.min.css') }}" media="screen">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="{{ asset('/js/select2.min.js') }}"></script>
    
 
   </head>
@@ -97,7 +100,7 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
   
 </body>
 </html>

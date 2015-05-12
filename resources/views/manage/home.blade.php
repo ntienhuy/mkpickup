@@ -55,9 +55,23 @@
                                 <form class="form-horizontal">
                                     <fieldset>
                                         <div class="form-group">
-                                            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                                            <label for="inputFrm" class="col-lg-2 control-label">Xuất phát</label>
                                             <div class="col-lg-10">
-                                                <input class="form-control" id="inputEmail" placeholder="Email" type="text">
+                                                <select class="js-from-location-single">
+                                                    <option value="45">Hồ Chí Minh</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputTo" class="col-lg-2 control-label">Nơi đến</label>
+                                            <div class="col-lg-10">
+                                                <select class="js-to-location-single">
+                                                    <option></option>
+                                                    @foreach($locations as $location)
+                                                        <option value="{{$location->id}}">{{$location->name}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -133,4 +147,16 @@
         </div>
 
     </div>
+    <script>
+        $(document).ready(function() {
+            $(".js-from-location-single").select2({
+                placeholder: "Chọn địa điểm",
+                language: "vi"
+            });
+            $(".js-to-location-single").select2({
+                placeholder: "Chọn địa điểm",
+                language: "vi"
+            });
+        });
+    </script>
 @endsection
