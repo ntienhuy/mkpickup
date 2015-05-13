@@ -34,7 +34,8 @@ class ManageController extends Controller {
     {
         $routes = App\Route::getItemsById(1);
         $locations = App\Location::getLocations();
-        return view('manage.home',compact('routes','locations'));
+        $carTypes = App\CarTypes::getAll();
+        return view('manage.home',compact('routes','locations','carTypes'));
     }
 
 }
