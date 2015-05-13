@@ -39,11 +39,19 @@ CREATE TABLE carTypes(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50),
     description VARCHAR(500),
+<<<<<<< HEAD
+=======
+    seat INT,
+>>>>>>> a48f0453ec13bd26cabb740977e79c562760071f
     kmPrice INT,
     nightFee INT
 )
 
+<<<<<<< HEAD
 INSERT INTO `cartypes`( `name`, `description`, `seat`) 
+=======
+INSERT INTO `carTypes`( `name`, `description`, `seat`) 
+>>>>>>> a48f0453ec13bd26cabb740977e79c562760071f
 VALUES 
 ('Xe 4-7 chỗ','Xe 4-7 chỗ ngồi',4),
 ('Xe 16 chỗ','Xe 16 chỗ ngồi',16),
@@ -816,4 +824,8 @@ INSERT INTO `locations`( `name`) VALUES
 ("Văn Chấn - Yên Bái"),
 ("Văn Yên - Yên Bái"),
 ("Yên Bái - Yên Bái"),
+<<<<<<< HEAD
 ("Yên Bình - Yên Bái");
+=======
+("Yên Bình - Yên Bái");
+>>>>>>> a48f0453ec13bd26cabb740977e79c562760071f

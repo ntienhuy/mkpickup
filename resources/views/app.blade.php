@@ -7,6 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="{{ asset('/css/bootstrap.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="{{ asset('/css/select2.min.css') }}" media="screen">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="{{ asset('/js/select2.min.js') }}"></script>
+>>>>>>> a48f0453ec13bd26cabb740977e79c562760071f
    
 
   </head>
@@ -80,6 +86,7 @@
 
       <div class="page-header" id="banner">
         <div class="row">
+<<<<<<< HEAD
           <div class="col-lg-8 col-md-7 col-sm-6">
             <h1>Cerulean</h1>
             <p class="lead">Blue sky</p>
@@ -1171,6 +1178,26 @@
 
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+=======
+            <div class="col-lg-8 col-md-9 col-sm-10">
+                </div>
+             <div class="col-lg-4 col-md-3 col-sm-2">
+                <h1>Cerulean</h1>
+                 <p class="lead">Blue sky</p>
+             </div>
+        </div>
+      </div>
+
+    @yield('content')
+
+
+
+
+
+
+
+
+>>>>>>> a48f0453ec13bd26cabb740977e79c562760071f
   
 </body>
 </html>
