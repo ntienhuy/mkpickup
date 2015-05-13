@@ -15,7 +15,7 @@
                             <th>Mã</th>
                             <th>Xuất phát</th>
                             <th>Điểm đến</th>
-                            <th>Thời gian</th>
+                            <th>Thời gian (ngày)</th>
                             <th>Quãng đường</th>
                             <th>Loại xe</th>
                             <th>Giá (1000 VND)</th>
@@ -29,7 +29,7 @@
                             <td>{{$route->id}}</td>
                             <td>{{$route->nameFrm}}</td>
                             <td>{{$route->nameTo}}</td>
-                            <td>{{$route->duration}}</td>
+                            <td>@if(($route->duration % 24) <> 0) {{$route->duration + ' giờ'}} @else {{$route->duration /24}} @endif</td>
                             <td>{{$route->length}}</td>
                             <td>{{$route->name}}</td>
                             <td><input id="{{$route->id}}" style="width:100px" type="text" value="{{$route->price/1000}}"></td>
@@ -75,64 +75,45 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                                            <label for="inputPassword" class="col-lg-2 control-label">Thời gian</label>
                                             <div class="col-lg-10">
-                                                <input class="form-control" id="inputPassword" placeholder="Password" type="password">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox"> Checkbox
-                                                    </label>
-                                                </div>
+                                                <input class="form-control" id="inputPassword" placeholder="Thời gian (giờ)" type="text">
+
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+                                            <label for="inputPassword" class="col-lg-2 control-label">Quãng đường</label>
                                             <div class="col-lg-10">
-                                                <textarea class="form-control" rows="3" id="textArea"></textarea>
-                                                <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                                                <input class="form-control" id="inputPassword" placeholder="Quãng đường (km)" type="text">
+
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-2 control-label">Radios</label>
+                                            <label for="inputPassword" class="col-lg-2 control-label">Giá</label>
                                             <div class="col-lg-10">
+                                                <input class="form-control" id="inputPassword" placeholder="Nhập giá" type="text">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Loại xe</label>
+                                            <div class="col-lg-10">
+                                                @foreach($carTypes as $carType)
                                                 <div class="radio">
                                                     <label>
-                                                        <input name="optionsRadios" id="optionsRadios1" value="option1" checked="" type="radio">
-                                                        Option one is this
+                                                        <input name="optionsRadios" id="optionsRadios{{$carType->id}}" value="{{$carType->id}}" checked="" type="radio">
+                                                        {{$carType->name}}
                                                     </label>
                                                 </div>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input name="optionsRadios" id="optionsRadios2" value="option2" type="radio">
-                                                        Option two can be something else
-                                                    </label>
-                                                </div>
+                                                @endforeach
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="select" class="col-lg-2 control-label">Selects</label>
-                                            <div class="col-lg-10">
-                                                <select class="form-control" id="select">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select>
-                                                <br>
-                                                <select multiple="" class="form-control">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select>
-                                            </div>
-                                        </div>
+
                                         <div class="form-group">
                                             <div class="col-lg-10 col-lg-offset-2">
-                                                <button type="reset" class="btn btn-default">Cancel</button>
-                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                                <button type="button" class="btn btn-primary">Thêm</button>
+                                                <button type="reset" class="btn btn-default">Xóa trắng</button>
                                             </div>
                                         </div>
                                     </fieldset>
