@@ -5,13 +5,17 @@
     <title>MKPickup</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="{{ asset('/css/app.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('/css/bootstrap.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/select2.min.css') }}" media="screen">
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="{{ asset('js/jquery-1.11.3.min.js') }}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="{{ asset('/js/select2.min.js') }}"></script>
     <script src="{{ asset('/js/vi.js') }}"></script>
-
+    <!-- DataTables CSS --><link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css">
+    <!-- DataTables --><script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.js"></script>
+    <!-- DataTables --><script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
 </head>
 <body>
 <div class="navbar navbar-default navbar-fixed-top">

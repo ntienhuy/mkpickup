@@ -31,6 +31,7 @@ CREATE TABLE routes(
     duration INT,
     price LONG,
     carType INT,
+    created_at TIMESTAMP,
     updated_at TIMESTAMP,
     isTop BOOLEAN
 )
@@ -39,19 +40,14 @@ CREATE TABLE carTypes(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50),
     description VARCHAR(500),
-<<<<<<< HEAD
-=======
     seat INT,
->>>>>>> a48f0453ec13bd26cabb740977e79c562760071f
     kmPrice INT,
     nightFee INT
 )
 
-<<<<<<< HEAD
-INSERT INTO `cartypes`( `name`, `description`, `seat`) 
-=======
-INSERT INTO `carTypes`( `name`, `description`, `seat`) 
->>>>>>> a48f0453ec13bd26cabb740977e79c562760071f
+
+
+INSERT INTO `carTypes`( `name`, `description`, `seat`)
 VALUES 
 ('Xe 4-7 chỗ','Xe 4-7 chỗ ngồi',4),
 ('Xe 16 chỗ','Xe 16 chỗ ngồi',16),

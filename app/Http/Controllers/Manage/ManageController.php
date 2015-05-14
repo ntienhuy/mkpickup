@@ -32,10 +32,17 @@ class ManageController extends Controller {
      */
     public function index()
     {
-        $routes = App\Route::getItemsById(1);
+        $routes = App\Route::getItemsAll();
         $locations = App\Location::getLocations();
         $carTypes = App\CarTypes::getAll();
         return view('manage.home',compact('routes','locations','carTypes'));
+    }
+    public function add()
+    {
+        $input = \Request::all();
+        $input['updated_at'] = \Carbon\Carbon::now();
+        $route =   App\Route::create($input);
+        return $route;
     }
 
 }
