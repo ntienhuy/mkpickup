@@ -12,8 +12,14 @@ class Route extends Model  {
      */
     protected $table = 'routes';
 
+    protected $fillable = ['idLocationFrm', 'nameFrm', 'idLocationTo', 'nameTo', 'duration', 'length', 'price', 'carType', 'updated_at'];
+
     public static function getItemsById($id){
-        return \DB::select('select * from routes R join carTypes C on R.carType = C.id where R.id = ?', [$id]);
+        return \DB::select('select *, R.id as routeId from routes R join carTypes C on R.carType = C.id where R.id = ?', [$id]);
+
+    }
+    public static function getItemsAll(){
+        return \DB::select('select *, R.id as routeId from routes R join carTypes C on R.carType = C.id');
 
     }
 
