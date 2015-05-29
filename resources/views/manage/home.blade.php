@@ -41,7 +41,7 @@
                             <td>{{$route->length}}</td>
                             <td>{{$route->name}}</td>
                             <td><input id="{{$route->routeId}}" style="width:100px" type="text" value="{{$route->price/1000}}"></td>
-                            <td><input type="button" value="Update"> <input type="button" value="Del"></td>
+                            <td><input type="button" class="btn btn-default updatebtn" value="Cập nhật" routeId="{{$route->routeId}}"> <input type="button"  class="btn btn-default delbtn" value="Xóa" routeId="{{$route->routeId}}"></td>
                         </tr>
                         @endforeach
                         </tbody>
@@ -187,6 +187,28 @@
                          },
                 "search":{"caseInsensitive": true}
             });
+            $(".updatebtn").click(function(){
+                console.log($(this).attr("routeId"));
+                dt.row($(this).parents('tr')).remove().draw();
+
+                return;
+                $.ajax({
+                    url: "{{action('Manage\ManageController@add')}}",
+                    data:{ routeId :$(this).attr("routeId")},
+
+                    type:"POST",
+
+                    success: function(result) {
+                        dt.row($(this).parents('tr')).remove().draw();
+
+                    },
+
+                    error: function(result) {
+                        alert("Có lỗi xảy ra");
+                    }
+
+                });
+            });
             $("#btnAdd").click(function() {
                 var fromLocation =  $(".js-from-location-single").select2('data')[0];
                 var toLocation =  $(".js-to-location-single").select2('data')[0];
@@ -227,7 +249,7 @@
                     },
 
                     error: function(result) {
-                        alert("Có lỗi xảy r");
+                        alert("Có lỗi xảy ra");
                     }
 
                 });

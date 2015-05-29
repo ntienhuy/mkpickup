@@ -45,4 +45,11 @@ class ManageController extends Controller {
         return $route;
     }
 
+    public function del(){
+        $input = \Request::all();
+        $routeId = $input["routeId"];
+        App\Route::destroy($routeId);
+        return 1;
+    }
+
 }
