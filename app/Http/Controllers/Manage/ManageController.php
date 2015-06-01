@@ -32,6 +32,7 @@ class ManageController extends Controller {
      */
     public function index()
     {
+
         $routes = App\Route::getItemsAll();
         $locations = App\Location::getLocations();
         $carTypes = App\CarTypes::getAll();
@@ -51,5 +52,16 @@ class ManageController extends Controller {
         App\Route::destroy($routeId);
         return 1;
     }
+
+    public function update(){
+        $input = \Request::all();
+        $routeId = $input["routeId"];
+        $price = $input["price"];
+        $route = \App\Route::find( $routeId);
+        $route->price = $price;
+        $route->save();
+        return 1;
+    }
+
 
 }

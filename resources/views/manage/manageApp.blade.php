@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('/css/select2.min.css') }}" media="screen">
     <script src="{{ asset('js/jquery-1.11.3.min.js') }}"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.1/jquery.form-validator.min.js"></script>
     <script src="{{ asset('/js/select2.min.js') }}"></script>
     <script src="{{ asset('/js/vi.js') }}"></script>
     <!-- DataTables CSS --><link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css">

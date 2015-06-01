@@ -18,7 +18,7 @@ Route::get('home', 'HomeController@index');
 Route::get('manage','Manage\ManageController@index');
 Route::post('manage/add','Manage\ManageController@add');
 Route::post('manage/del','Manage\ManageController@del');
-
+Route::post('manage/update','Manage\ManageController@update');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

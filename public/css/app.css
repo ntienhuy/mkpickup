@@ -1,4 +1,16 @@
-#message {
+#messageUpdate {
+    position: fixed;
+    width:50%;
+    z-index: 1029;
+    display: none;
+}
+#messageDel {
+    position: fixed;
+    width:50%;
+    z-index: 1029;
+    display: none;
+}
+#messageAdd {
     position: fixed;
     width:50%;
     z-index: 1029;
