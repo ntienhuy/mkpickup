@@ -19,3 +19,15 @@
 #inner-message {
     margin: 0 auto;
 }
+
+.footer-container {
+    padding: 10px 0px;
+    border-top: 1px solid #30231A;
+}
+
+.footer-container p {
+    text-align: center;
+}
+
+
+

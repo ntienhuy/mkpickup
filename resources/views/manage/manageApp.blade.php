@@ -93,6 +93,16 @@
 
     @yield('content')
 
+    <div id="footer" class="footer-container footer navbar-bottom>">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Công ty thương mại dịch vụ MKPickup | Thiết kế by BS team - 2015</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 
 
 

@@ -14,6 +14,7 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
+Route::get('showRoute','ShowRouteController@index');
 
 Route::get('manage','Manage\ManageController@index');
 Route::post('manage/add','Manage\ManageController@add');
