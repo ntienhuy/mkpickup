@@ -32,8 +32,14 @@ class ShowRouteController extends Controller {
      */
     public function index()
     {
+        $input = \Request::all();
         $routes = null;
         $locations = App\Location::getLocations();
+
+        if(isset($input['locationFrom']) && isset($input['locationTo']) ) {
+            $routes = App\Route::findRoute($input['locationFrom'], $input['locationTo']);
+        }
+
         return view('showRoute',compact('routes','locations'));
     }
 

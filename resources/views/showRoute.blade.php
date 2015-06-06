@@ -4,19 +4,27 @@
     <div class="container">
         <div class="jumbotron">
             <h3>Tim tuyen</h3>
-            <form>
-                <label for="inputFrm" class="control-label">Xuất phát</label>
-                <select class="js-from-location-single" id="locationFromSelect">
-                    <option value="45">Hồ Chí Minh</option>
-                </select>
-                <label for="inputTo" class="control-label">Nơi đến</label>
-                <select class="js-to-location-single">
-                    <option></option>
-                    @foreach($locations as $location)
-                        <option value="{{$location->id}}">{{$location->name}}</option>
-                    @endforeach
-                </select>
-                 <input type="text" id="datepicker">
+            <form class="form-inline" action="" method="get">
+                <div class="form-group inline-form-group">
+                    <label for="inputFrm" class="control-label">Xuất phát</label>
+                    <select class="js-from-location-single" id="locationFromSelect" name="locationFrom">
+                        <option value="45">Hồ Chí Minh</option>
+                    </select>
+                </div>
+                <div class="form-group inline-form-group">
+                    <label for="inputTo" class="control-label">Nơi đến</label>
+                    <select class="js-to-location-single" name="locationTo">
+                        <option></option>
+                        @foreach($locations as $location)
+                            <option value="{{$location->id}}">{{$location->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group inline-form-group">
+                    <label for="inputDate" class="control-label">Ngày đi</label>
+                    <input type="text" id="datepicker" name="date">
+                </div>
+                <button type="submit" class="btn btn-success">Tim chuyen</button>
             </form>
         </div>
         <form id="routeForm">
@@ -86,12 +94,7 @@
                 language: "vi"
             });
 
-            $('.js-to-location-single').on("change", function (e) {
-                if(isDurationValid && isLengthValid && isPriceValid &&  $(".js-to-location-single").select2('data')[0].id != "")
-                    $('#btnAdd').prop('disabled', false);
-                else
-                    $('#btnAdd').prop('disabled', true);
-            });
+
 
             /* Create an array with the values of all the input boxes in a column, parsed as numbers */
             $.fn.dataTable.ext.order['dom-text-numeric'] = function  ( settings, col )
