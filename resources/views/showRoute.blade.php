@@ -140,7 +140,8 @@
                 },
                 "search":{"caseInsensitive": true},
                 "lengthChange": false,
-                "bFilter" : false
+                "bFilter" : false,
+                "paging":   false
             });
 
             $('#routeTable tbody').on('click', '.bookbtn', function () {
