@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('/css/bootstrap.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/select2.min.css') }}" media="screen">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="{{ asset('js/jquery-1.11.3.min.js') }}"></script>

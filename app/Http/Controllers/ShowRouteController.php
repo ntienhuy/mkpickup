@@ -35,12 +35,18 @@ class ShowRouteController extends Controller {
         $input = \Request::all();
         $routes = null;
         $locations = App\Location::getLocations();
-
-        if(isset($input['locationFrom']) && isset($input['locationTo']) ) {
+        $fromLocation = null;
+        $toLocation = null;
+        $date = null;
+        if(isset($input['locationFrom']) && isset($input['locationTo']) && isset($input['date']) ) {
+            $fromLocation = App\Location::find($input['locationFrom'])->name;
+            $toLocation = App\Location::find($input['locationTo'])->name;
             $routes = App\Route::findRoute($input['locationFrom'], $input['locationTo']);
+            $date = $input['date'];
+
         }
 
-        return view('showRoute',compact('routes','locations'));
+        return view('showRoute',compact('routes','locations','fromLocation','toLocation','date'));
     }
 
 }

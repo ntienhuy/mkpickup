@@ -23,6 +23,7 @@
 .footer-container {
     padding: 10px 0px;
     border-top: 1px solid #30231A;
+    margin-top:50px;
 }
 
 .footer-container p {
@@ -30,7 +31,27 @@
 }
 
 .inline-form-group{
-    padding-right: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
+.fa-bus, .my-arrow {
+    color:#FF6000;
+}
+#routeTable th {
+    text-align: center;
+}
+#routeTable td {
+    text-align: center;
+}
 
+.my-price {
+    color:#EC1807;
+}
+.my-route{
+    color:#170A00;
+}
+.my-date{
+    color:#170A00;
+    font-style: italic;
+}
