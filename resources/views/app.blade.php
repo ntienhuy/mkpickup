@@ -63,8 +63,12 @@
         @yield('content')
         <div id="footer" class="footer-container footer navbar-bottom>">
             <div class="row">
-                <div class="col-lg-12">
-                    <p>Công ty thương mại dịch vụ MKPickup | Thiết kế by BS team - 2015</p>
+                <div class="col-lg-1">
+                    <img src="{{ asset('img/logo_mk.png')}}" style="height:40px" />
+                </div>
+                <div class="col-lg-9">
+                     <p> Bản quyền © 2015 thuộc về MKPickup.com <br>
+                      Địa chỉ: 1 Hồ Tùng Mậu - Lầu 63 tòa nhà Bitexco | Liên hệ: 0933221412</p>
                 </div>
             </div>
         </div>
