@@ -66,7 +66,8 @@
                                         <td>{{$route->length}}</td>
                                         <td>{{$route->name}}</td>
                                         <td class="my-price">{{number_format($route->price)}} đ</td>
-                                        <td><input id="btnBook_{{$route->routeId}}" type="button" class="btn btn-warning btn-xs bookbtn" value="Đặt xe" routeId="{{$route->routeId}}"></td>
+                                        <td><a id="btnBook_{{$route->routeId}}" href="booking?idRoute={{$route->routeId}}&date={{$date}}" class="btn btn-warning btn-xs bookbtn" routeId="{{$route->routeId}}">Đặt xe</a></td>
+
                                     </tr>
                                 @endforeach
                             @endif
@@ -144,11 +145,7 @@
                 "paging":   false
             });
 
-            $('#routeTable tbody').on('click', '.bookbtn', function () {
 
-                alert("Dang cap nhat")
-
-            });
         });
     </script>
 @endsection

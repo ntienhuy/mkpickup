@@ -820,8 +820,14 @@ INSERT INTO `locations`( `name`) VALUES
 ("Văn Chấn - Yên Bái"),
 ("Văn Yên - Yên Bái"),
 ("Yên Bái - Yên Bái"),
-<<<<<<< HEAD
 ("Yên Bình - Yên Bái");
-=======
-("Yên Bình - Yên Bái");
->>>>>>> a48f0453ec13bd26cabb740977e79c562760071f
+
+INSERT INTO `locations`( `name`) VALUES 
+("Sân bay Tân Sơn Nhất"),
+("City tour HCM")
+
+INSERT INTO `carTypes`( `name`, `description`, `seat`)
+VALUES 
+('Xe 45 chỗ - Universe','Xe 45 chỗ ngồi',45),
+('Xe 45 chỗ - Aero space','Xe 45 chỗ ngồi',45)
+

@@ -26,6 +26,9 @@ class Route extends Model  {
     public static function findRoute($locationFrom, $locationTo){
         return \DB::select('select *, R.id as routeId from routes R join carTypes C on R.carType = C.id where R.idLocationFrm =? AND R.idLocationTo =?',[$locationFrom, $locationTo]);
     }
+    public static function findRouteWithDuration($locationFrom, $locationTo, $duration){
+        return \DB::select('select *, R.id as routeId from routes R join carTypes C on R.carType = C.id where R.idLocationFrm =? AND R.idLocationTo =? AND R.duration =?',[$locationFrom, $locationTo, $duration]);
+    }
 
 
 }

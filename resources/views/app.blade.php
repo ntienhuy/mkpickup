@@ -15,6 +15,7 @@
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.1/jquery.form-validator.min.js"></script>
+    <script src="{{ asset('js/jquery.number.js') }}"></script>
     <script src="{{ asset('js/datepicker-vi.js') }}"></script>
     <script src="{{ asset('/js/select2.min.js') }}"></script>
     <script src="{{ asset('/js/vi.js') }}"></script>
