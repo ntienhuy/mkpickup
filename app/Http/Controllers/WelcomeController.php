@@ -1,4 +1,5 @@
 <?php namespace App\Http\Controllers;
+use Mail;
 
 class WelcomeController extends Controller {
 
@@ -30,6 +31,10 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
+        Mail::send('app', ['key' => 'value'], function($message)
+        {
+            $message->to('tienhuy1412@gmail.com', 'John Smith')->subject('Welcome!');
+        });
 		return view('welcome');
 	}
 

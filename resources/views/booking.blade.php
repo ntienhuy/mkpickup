@@ -88,28 +88,28 @@
                                     <div class="form-group">
                                         <label for="inputName" class="col-lg-3 control-label">Họ tên</label>
                                         <div class="col-lg-9">
-                                            <input class="form-control" id="inputName" placeholder="" type="text"  data-validation-error-msg="Vui lòng nhập vào họ tên">
+                                            <input class="form-control" name="name" id="inputName" placeholder="" type="text"  data-validation-error-msg="Vui lòng nhập vào họ tên">
 
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputPhone" class="col-lg-3 control-label">Điện thoại</label>
                                         <div class="col-lg-9">
-                                            <input class="form-control" id="inputPhone" placeholder="" type="text" data-validation="number" data-validation-error-msg="Vui lòng nhập vào số điện thoại">
+                                            <input class="form-control" name="phone" id="inputPhone" placeholder="" type="text" data-validation="number" data-validation-error-msg="Vui lòng nhập vào số điện thoại">
 
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputEmail" class="col-lg-3 control-label">Email</label>
                                         <div class="col-lg-9">
-                                            <input class="form-control" id="inputEmail" placeholder=""  data-validation="number" type="text" data-validation-error-msg="Vui lòng nhập vào email">
+                                            <input class="form-control" name="email" id="inputEmail" placeholder=""  data-validation="number" type="text" data-validation-error-msg="Vui lòng nhập vào email">
 
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputAddress" class="col-lg-3 control-label">Địa chỉ</label>
                                         <div class="col-lg-9">
-                                            <input class="form-control" id="inputAddress" placeholder="" type="text"  data-validation-error-msg="Vui lòng nhập vào địa chỉ">
+                                            <input class="form-control" name="address" id="inputAddress" placeholder="" type="text"  data-validation-error-msg="Vui lòng nhập vào địa chỉ">
 
                                         </div>
                                     </div>
@@ -122,13 +122,10 @@
                 </div>
             </div>
             <input type="hidden" value="{{ csrf_token() }}" name="_token">
+            <input type="hidden" value="{{ $date }}" name="date">
             <button type="submit" class="btn btn-warning">Tra cứu</button>
     </form>
     </div>
-
-
-
-
 
     <script>
 
