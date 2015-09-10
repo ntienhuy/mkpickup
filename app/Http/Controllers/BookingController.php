@@ -43,7 +43,7 @@ class BookingController extends Controller {
         $bookRoute =  \App\Route::find($idRoute);
         $routes = \App\Route::findRouteWithDuration($bookRoute->idLocationFrm, $bookRoute->idLocationTo,$bookRoute->duration);
         $date = $input["date"];
-        
+
         return view("booking",compact("bookRoute","routes","date"));
     }
     public function book()

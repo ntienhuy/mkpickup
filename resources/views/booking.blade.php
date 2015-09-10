@@ -123,7 +123,7 @@
             </div>
             <input type="hidden" value="{{ csrf_token() }}" name="_token">
             <input type="hidden" value="{{ $date }}" name="date">
-            <button type="submit" class="btn btn-warning">Tra cứu</button>
+            <button type="submit" class="btn btn-warning">Đặt xe</button>
     </form>
     </div>
 
